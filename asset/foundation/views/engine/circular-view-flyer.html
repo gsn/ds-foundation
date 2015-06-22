@@ -1,4 +1,4 @@
-<div class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
+<div class="columns medium-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-type="circular"></div>
@@ -15,13 +15,13 @@
   </div>
 
   <div class="row">
-  	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
+  	<div class="columns medium-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
   <br/>
   <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
-    		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
+    		<div class="columns medium-4 small-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
          <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
            <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"> 
            <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
@@ -45,10 +45,10 @@
             data-ng-click="vm.activeItem = item"
             id="item_{{item.ItemId}}">
             <div style="position: relative" class="hover-zoom">
-              <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
+              <a class="button gsn-button-default button tiny" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
               </a>
-              <a class="btn btn-default btn-xs circInfoButton" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
+              <a class="button gsn-button-default button tiny circInfoButton" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
                 <i class="fa fa-info-circle"></i>
               </a>
               <div class="ripple" style="opacity: 0.3"></div>

@@ -1,10 +1,6 @@
-<!--
-  <a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false">Has Content Dropdown</a>
-<div id="drop2" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
-  <p>Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!</p>
-</div>
--->
-<span>Sort by: </span>
+<div class="row">
+  <div class="columns medium-12">
+	<span>Sort by: </span>
 
 	<button data-dropdown="gsn-coupons-sorting-options" aria-controls="gsn-coupons-sorting-options" aria-expanded="false">{{vm.sortByName}} <span class="caret"></span></button>
 	<ul data-dropdown-content class="f-dropdown content" id="gsn-coupons-sorting-options">
@@ -14,6 +10,13 @@
 	  <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'BrandName';vm.sortByName='Brand'">Brand</a></li>
 	  <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'CategoryName';vm.sortByName='Department'">Department</a></li>
 	</ul>
+  </div>
+  <div class="columns medium-12">
+	<form name="printableCouponSearch" class="right" style="width: 300px; padding-top: 5px; padding-right: 5px;">
+	  <input type="text" class="form-control" placeholder="Search for..." name="q" data-ng-model="vm.filterBy">
+	</form>
+  </div>
+</div>
 
 <script>
   $(document).ready(function() {

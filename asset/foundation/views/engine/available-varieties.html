@@ -9,7 +9,7 @@
     <img class="availableVarietiesImage" data-ng-src="{{gvm.selectedItem.SmallImageUrl  || getThemeUrl('/images/no_image.jpg')}}" />
   </div>
   <div class="generic-content">                                                                                                                  
-    <button class="btn btn-default btn-xs pull-right" 
+    <button class="button gsn-button-default button tiny right" 
     data-ng-click="doToggleCartItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "Remove" || "Add"}}</button>
     <h4>{{gvm.selectedItem.PriceString}}</h4>
   </div>
@@ -18,8 +18,8 @@
   <div class="availableVarietiesList generic-content" data-ng-if="gvm.selectedItem.Varieties.length > 0">
     <ul>
       <li class="row generic-content" data-ng-repeat="item in gvm.selectedItem.Varieties">
-        <button type="button" class="btn btn-default btn-xs col-md-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
-        <p class="col-md-9 pull-right">{{item.Description}}</p>
+        <button type="button" class="button gsn-button-default button tiny columns medium-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+        <p class="columns medium-9 right">{{item.Description}}</p>
       </li>
     </ul>
   </div>

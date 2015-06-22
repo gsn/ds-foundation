@@ -2,7 +2,7 @@
 <h1>Locate Your Favorite Store</h1>
 <div data-ctrl-store-locator="" class="row">
   <!-- search form-->
-  <div class="medium-12 columns">
+  <div class="columns medium-12">
     <form name="myStoreLocatorForm">
       Zip, City or State: <br />
       <input class="search" type="text" name="search" data-ng-model="search.storeLocator"><br />
@@ -21,7 +21,7 @@
       Unable to locate a store within the specified search radius.  Displaying first closest store below.
     </div>
   </div>
-  <div class="medium-12 columns">
+  <div class="columns medium-12">
     <!-- the map -->
     <div id="map_canvas" data-ui-map="myMap" class="map-container gMap" data-ui-options="mapOptions" style="height: 280px;"></div>
     <!-- the map popup view definition -->
@@ -47,7 +47,7 @@
     <div data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
       <div><h2>{{group.key}}</h2></div><br />
       <div data-ng-repeat="marker in group.items"
-        class="medium-4 small-12 columns" 
+        class="columns medium-4 small-12" 
         data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" 
         itemscope itemtype="http://schema.org/Store"></div>
     </div>

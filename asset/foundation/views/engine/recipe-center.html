@@ -1,7 +1,7 @@
 <div class="hidden" data-gsn-title="{{ChainName}} | recipe center"></div>
-<div data-ctrl-recipe-center="" class="col-md-12 text-center">
+<div data-ctrl-recipe-center="" class="columns medium-12 text-center">
   <h1>Recipe Center</h1>
-  <div class="col-md-6 col-sm-6">
+  <div class="columns medium-6 small-6">
     <div class="row">
       <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + vm.featuredRecipe.RecipeId)" data-analytics-on="click" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{vm.featuredRecipe.RecipeTitle}}" data-analytics-category="Recipe">
         <h3>Recipe of the Day</h3>
@@ -12,21 +12,21 @@
       </a>
     </div>
     <div class="row recipeMenu">
-      <button class="btn col-xs-12 text-left" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">
-        <div class="pull-left">
+      <button class="button text-left" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">
+        <div class="left">
           My Recipe Box (Saved Recipes)
         </div>
-        <div class="pull-right">
+        <div class="right">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </div>
       </button>
     </div>
     <div class="row dropdown recipeMenu">
-      <button class="btn col-xs-12 text-left" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">
-        <div class="pull-left">
+      <button class="button text-left" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">
+        <div class="left">
           Advanced Recipe Search
         </div>
-        <div class="pull-right">
+        <div class="right">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </div>
       </button>
@@ -39,7 +39,7 @@
       </a>
     </div>
   </div>
-  <div class="col-md-6 col-sm-6">
+  <div class="columns medium-6 small-6">
     <a href="javascript:void(0)" data-ng-click="goUrl('/mealplannerfull')">
       <h3>Meal Planner</h3>
     </a>

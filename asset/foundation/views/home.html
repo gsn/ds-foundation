@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
+  <div class="columns medium-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
       <ul data-orbit>
           <li data-ng-repeat="item in getContentList()" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="item"  data-ng-class="{ 'active': $index == 0 }"></li>
       </ul>
