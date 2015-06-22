@@ -3,7 +3,7 @@
 		<h4 itemprop="name">{{marker.location.StoreName}}</h4>
 	</a>
 </div>
-<div class="store-info-item">
+<div>
   <div>
     <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
      <span itemprop="streetAddress">{{marker.location.PrimaryAddress}}</span><br />
@@ -16,7 +16,7 @@
    </div>
   </div>
   <div>
-     <a href="javascript:void(0)" data-ng-click="selectStore(marker, true)" class="btn btn-default">
+     <a href="javascript:void(0)" data-ng-click="selectStore(marker, true)" class="button gsn-button-default">
       <i class="fa fa-square-o" data-ng-hide="isCurrentStore(marker)"></i>
       <i class="fa fa-check-square-o" data-ng-show="isCurrentStore(marker)"></i> My Store
     </a>
@@ -32,12 +32,12 @@
     <div>Open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div><br />
     <div>Phone: <span itemprop="telephone">{{marker.location..PharmacyPhone}}</span></div><br />
   </div>
-  <div data-ng-show="marker.location.Redirect" class="hidden-info">
+  <div data-ng-show="marker.location.Redirect">
     <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))">
       <h5>Store Details</h5>
     </a>
   </div>
-  <div data-ng-hide="marker.location.Redirect" class="hidden-info">
+  <div data-ng-hide="marker.location.Redirect">
     <a href="javascript:void(0)" data-ng-click="goUrl('/store/' + marker.location.StoreNumber)">
       <h5>Store Details</h5>
     </a>

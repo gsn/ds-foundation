@@ -9,17 +9,7 @@
       </div>
     </div>
     <div class="col-md-8 col-xs-12 text-right">
-      <span>Sort by: </span>
-      <div class="btn-group dropdown">
-        <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{vm.sortByName}} <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'EndDate';vm.sortByName='About to Expire'">About to Expire</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = '-StartDate';vm.sortByName='Newest'">Newest</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = '-TopTagLine';vm.sortByName='Savings'">Savings</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'BrandName';vm.sortByName='Brand'">Brand</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'CategoryName';vm.sortByName='Department'">Department</a></li>
-        </ul>
-      </div>
+      <div data-ng-include="getThemeUrl('/views/engine/coupons-sorting-options.html')"></div>
     </div>
   </div>
   <div class="row">

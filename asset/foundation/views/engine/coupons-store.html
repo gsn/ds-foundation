@@ -1,21 +1,11 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
 <div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
-  <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
+  <div data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></div>
   <h1>Store Coupons</h1>
   <div class="col-md-12">
     <div class="col-md-4 col-xs-12 totalSavings"></div>
     <div class="col-md-6 col-xs-12 text-right">
-      <span>Sort by: </span>
-      <div class="btn-group dropdown">
-        <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{vm.sortByName}} <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'EndDate';vm.sortByName='About to Expire'">About to Expire</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = '-StartDate';vm.sortByName='Newest'">Newest</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = '-TopTagLine';vm.sortByName='Savings'">Savings</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'BrandName';vm.sortByName='Brand'">Brand</a></li>
-          <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'CategoryName';vm.sortByName='Department'">Department</a></li>
-        </ul>
-      </div>
+      <div data-ng-include="getThemeUrl('/views/engine/coupons-sorting-options.html')" data-ng-repeat="item in selectedCoupons.targeted"></div>
     </div>
   </div>
   <div class="col-md-12">
