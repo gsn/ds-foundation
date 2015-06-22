@@ -1,2 +1,2 @@
-# ds-bootstrap
-Digital Store bootstrap theme
+# ds-foundation
+Digital Store foundation theme

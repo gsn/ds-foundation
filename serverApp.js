@@ -28,7 +28,7 @@ function startServer(chainId) {
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
     if (myPath.length <= 2 || myPath.indexOf('.') < 0)
-      myPath = path.join('asset/bootstrap/index.html');
+      myPath = path.join('asset/foundation/index.html');
 
     console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
@@ -41,7 +41,7 @@ function startServer(chainId) {
 
       var k = fs.readFileSync(fullPath, 'utf8');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
-      k = k.replace('cdn-staging.gsngrocers.com/asset/bootstrap', 'localhost:' + port + '/asset/bootstrap');
+      k = k.replace('cdn-staging.gsngrocers.com/asset/foundation', 'localhost:' + port + '/asset/foundation');
       response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
     }
   });
