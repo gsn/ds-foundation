@@ -43,13 +43,15 @@
     </div>
   </div>
   <!-- stores -->
-  <div class="allStores row">
-    <div data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
-      <div><h2>{{group.key}}</h2></div><br />
-      <div data-ng-repeat="marker in group.items"
-        class="columns medium-4 small-12" 
-        data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" 
-        itemscope itemtype="http://schema.org/Store"></div>
+  <div class="allStores columns medium-12">
+    <div class="row">
+      <div data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
+        <div><h2>{{group.key}}</h2></div><br />
+        <div data-ng-repeat="marker in group.items"
+          class="columns medium-4 small-12" 
+          data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" 
+          itemscope itemtype="http://schema.org/Store"></div>
+      </div>
     </div>
   </div>
 </div>    
