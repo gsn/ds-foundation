@@ -45,7 +45,7 @@
             data-ng-click="vm.activeItem = item"
             id="item_{{item.ItemId}}">
             <div style="position: relative" class="hover-zoom">
-              <a class="button gsn-button-default button tiny" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
+              <a class="button gsn-button-default button medium" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
               </a>
               <a class="button gsn-button-default button tiny circInfoButton" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
